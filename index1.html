@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Meta, title, CSS, favicons, etc. -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>ಬೆಳದಿಂಗಲು</title>
+	
+	<!-- Styles -->
+	<link rel='stylesheet' href='assets/css/bootstrap.min.css'>
+	<link rel='stylesheet' href='assets/css/animate.min.css'>
+	<link rel='stylesheet' href="assets/css/font-awesome.min.css"/>
+	<link rel='stylesheet' href="assets/css/style.css"/>
+	
+	<!-- Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
+
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+	<![endif]-->
+			
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="#">
+</head>
+<body>
+<audio id="background-music" autoplay loop>
+        <source src="ommantra1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+<!-- Begin Hero Bg -->
+<div id="parallax">
+</div>
+<!-- End Hero Bg
+	================================================== -->
+<!-- Start Header
+	================================================== -->
+<header id="header" class="navbar navbar-inverse navbar-fixed-top" role="banner">
+	<div class="container">
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="#hero" class="navbar-brand" style="font-size: 30px;text-align: start;">ಬೆಳದಿಂಗಲು<span class="lighter"></span></a>
+		</div>
+
+		<nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
+			<!-- Language Search Box -->
+			<div class="language-search-box">
+				<!-- Language Dropdown -->
+				<select id="language-dropdown" class="form-control language-dropdown">
+					<option value="" disabled selected>Select a language</option>
+					<option value="en">English</option>
+					<option value="kn">ಕನ್ನಡ</option>
+				</select>
+			</div>
+
+			<ul class="nav navbar-nav">
+				<li><a href="hero" data-target="hero">ಮನೆ</a></li>
+				<li><a href="#" data-target="about">ನಮ್ಮ</a></li>
+				<li><a href="#" data-target="gallery">ಉದ್ದೇಶಗಳು</a></li>
+				<li><a href="#" data-target="slider">ಸುದ್ದಿ</a></li>
+				<li><a href="#" data-target="faq">ರಾಯರಾವತ್</a></li>
+				<li><a href="#" data-target="contactarea">ನಮ್ಮೊಂದಿಗೆ ನೋಂದಾಯಿಸಿ</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		const languageDropdown = document.getElementById('language-dropdown');
+		const parallax = document.getElementById('parallax');
+		
+		parallax.style.backgroundImage = 'url("homeimage.jpg")';
+	
+		// Language selection change logic
+		languageDropdown.addEventListener('change', function () {
+			const selectedLanguage = languageDropdown.value;
+	
+			const languageUrls = {
+				'en': '/index.html',       // English page URL
+				'kn': '/index1.html'       // Kannada page URL
+			};
+	
+			if (languageUrls[selectedLanguage]) {
+				window.location.href = languageUrls[selectedLanguage];
+			}
+		});
+	
+		// Navigation link background change logic
+		const navLinks = document.querySelectorAll('.navbar-nav li a');
+	
+		const backgrounds = {
+			'hero': 'url("homeimage.jpg")',
+			'about': 'url("aboutus.jpg")',
+			'gallery': 'url("aboutus.jpg")',
+			'slider': 'url("aboutus.jpg")',
+			'faq': 'url("rayaravath.jpg")',
+			'contactarea': 'url("rayaravath.jpg")'
+		};
+	
+		navLinks.forEach(link => {
+			link.addEventListener('click', function (e) {
+				e.preventDefault(); // Prevent default anchor behavior
+				const targetId = link.getAttribute('data-target');
+				if (backgrounds[targetId]) {
+					parallax.style.backgroundImage = backgrounds[targetId]; // Change background image
+				}
+			});
+		});
+	});
+</script>
+
+
+</body>
+</html>
+
+
+<!-- Intro
+	================================================== -->
+<section id="hero" class="section">
+<div class="container">
+	<div class="row">
+		<div class="col-md-5">
+			<div class="herotext">
+				<h1 class="wow bounceInDown" data-wow-duration="1s" data-wow-delay="0.1s">ಕಳಪೆಯಲ್ಲಿ ಒಂದು ಬೆಳಕು<span class="lighter">ಜನರ ಜೀವನ</span></h1>
+				<p class="lead wow zoomIn" data-wow-duration="2s" data-wow-delay="0.5s">
+					ನಾವು ಹರ್ಷಚಿತ್ತದಿಂದ ನೀಡಿದಾಗ ಮತ್ತು ಕೃತಜ್ಞತೆಯಿಂದ ಸ್ವೀಕರಿಸಿದಾಗ, ಎಲ್ಲರೂ ಆಶೀರ್ವದಿಸುತ್ತಾರೆ.
+				</p>
+				
+			</div>
+		</div>
+		<div class="col-md-7">
+		</div>
+	</div>
+</div>
+</section>
+
+<!-- About
+	================================================== -->
+<section id="about" class="parallax section" style="background-image: url(http://themepush.com/demo/runcharity/assets/img/1.jpg);">
+<div class="wrapsection">
+	<div class="parallax-overlay" style="background-color: #01b0d1;opacity:0.9;"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<!-- Title -->
+				<div class="maintitle">
+					<h3 class="section-title"><strong><span class="lighter">ನಮ್ಮ ವೆಬ್‌ಸೈಟ್‌ಗೆ ಸ್ವಾಗತ</span></strong> </h3>
+					<p class="lead">
+						ಸಹಾಯ, ಸಂತೋಷ, ಆರೋಗ್ಯ, ಪ್ರಾಮಾಣಿಕತೆ.
+					</p>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="service-box wow zoomIn" data-wow-duration="1.5s" data-wow-delay="0.1s">
+					<img src="http://themepush.com/demo/runcharity/assets/img/dummy.jpg" alt="">
+					<span class="glyphicon glyphicon-heart"></span>
+					<h3></h3>
+					<div class="text-left">
+						<p>
+							ಕಾರ್ಪೊರೇಟ್ ಸಾಮಾಜಿಕ ಜವಾಬ್ದಾರಿಯಾಗಿ ಸಿರ್ಬ್ರಿಡ್ ಗ್ರೀನ್‌ಲಜಿ ಪ್ರೈವೇಟ್ ಲಿಮಿಟೆಡ್‌ನ ಸಂಸ್ಥಾಪಕ ಮತ್ತು ಸಿಇಒ ಶ್ರೀ ಬಿ.ಶ್ರೀನಿವಾಸ್ ಅವರ ಕಾರ್ಯಾಚರಣೆಯನ್ನು ಪ್ರಾರಂಭಿಸಿದರು. ನಮ್ಮ ಮುಖ್ಯ ಗುರಿ ಮತ್ತು ಮಿಷನ್ ಬಡ ಕುಟುಂಬ ಜೀವನದಲ್ಲಿ ಶಾಂತಿ ಮತ್ತು ಸಂತೋಷವನ್ನು ಪ್ರತಿಯೊಬ್ಬ ವ್ಯಕ್ತಿಯ ವ್ಯಾಪ್ತಿಯಲ್ಲಿ ತರುವುದು. 
+						</p>
+						
+						
+						<p class="text-center">
+							<button type="button" class="btn btn-info btn-md"><a href="#"></a></button>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="service-box wow flipInY" data-wow-duration="1.5s" data-wow-delay="0.1s">
+					<span class="glyphicon glyphicon-heart"></span>
+					<h3></h3>
+					<p>
+						ಬೆಳದಿಂಗಲು ಸಿರ್ಬ್ರಿಡ್ ಗ್ರೀನ್ಲಾಜಿ ಪ್ರೈವೇಟ್ ಲಿಮಿಟೆಡ್‌ನಿಂದ ಕಾರ್ಪೊರೇಟ್ ಸಾಮಾಜಿಕ ಜವಾಬ್ದಾರಿಯಾಗಿ ರೂಪುಗೊಂಡಿದೆ. ಬೆಳದಿಂಗಲು ಅವರು ಬಡ ಕುಟುಂಬ ಮತ್ತು ಮಕ್ಕಳ ಶಿಕ್ಷಣ ಮತ್ತು ಕುಟುಂಬಗಳಿಗೆ ಆರೋಗ್ಯ ಮಾರ್ಗಸೂಚಿಗಳಿಗೆ ಮಾತ್ರ ಸಹಾಯ ಮಾಡುತ್ತಾರೆ ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ಕೆಲವು ಕಾರ್ಯವಿಧಾನಗಳನ್ನು ಹೊಂದಿರುತ್ತದೆ.
+					</p>
+					
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="service-box wow flipInY" data-wow-duration="1.5s" data-wow-delay="0.2s">
+					<span class="glyphicon glyphicon-heart"></span>
+					<h3></h3>
+					<p>
+						ಸಮಾಜದ ಸಮಸ್ಯೆಗಳಿಗೆ ಧನಾತ್ಮಕವಾಗಿ ತಲುಪುವ ಮತ್ತು ಸಮಾಜ ಸೇವೆಯ ಕಾರ್ಯಗಳನ್ನು ಕೈಗೊಳ್ಳಲು ಅವರನ್ನು ಪ್ರೇರೇಪಿಸುವ ಸಾಮಾನ್ಯ ಗುರಿಯನ್ನು ಹೊಂದಿರುವ ವೈಯಕ್ತಿಕ ಮತ್ತು ಒಗ್ಗಟ್ಟಿನ ಜನರ ವ್ಯಾಪ್ತಿಯೊಳಗೆ "ಬಡ ಕುಟುಂಬಕ್ಕೆ ಸಹಾಯ ಮಾಡಿ" ಎಂಬ ಮುಖ್ಯ ಉದ್ದೇಶದೊಂದಿಗೆ ದಿನಾಂಕದಂದು ನೋಂದಾಯಿಸಲಾಗಿದೆ.
+
+
+					</p>
+					<button type="button" class="btn btn-info btn-md"><a href="#"></a></button>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="service-box wow flipInY" data-wow-duration="1.5s" data-wow-delay="0.3s">
+					<span class="glyphicon glyphicon-heart"></span>
+					<h3></h3>
+					<p>
+						ನಾವು ಸಮಾಜಕ್ಕೆ ನೀಡಬಹುದಾದ ಮಾನವೀಯ ಕೆಲಸ. ಸಮಾಜದಿಂದ ರಾಜ್ಯಕ್ಕೆ ಮತ್ತು ರಾಜ್ಯದಿಂದ ದೇಶಕ್ಕೆ ಸಲ್ಲಿಸಿದ ಸೇವೆಯು ಅಂತಿಮವಾಗಿ ದೇವರ ಆರಾಧನೆಯಾಗಿದೆ.
+					</p>
+					<button type="button" class="btn btn-info btn-md"><a href="#"></a></button>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="service-box wow flipInY" data-wow-duration="1.5s" data-wow-delay="0.4s">
+					<span class="glyphicon glyphicon-heart"></span>
+					<h3></h3>
+					<p>
+						ಬೆಳದಿಂಗಳು" ಸಿರ್ಬ್ರಿಡ್ ಗ್ರೀನ್‌ಲಾಜಿಯಿಂದ ರೂಪುಗೊಂಡಿದೆ.ಈ ಟ್ರಸ್ಟ್‌ನ ಮುಖ್ಯ ಸಂಸ್ಥಾಪಕರಾದ ಶ್ರೀ ಬಿ.ಶ್ರೀನಿವಾಸ್, ಅವರ ಉದ್ದೇಶವು ಬಡವರ ಸೇವೆಯೇ ಹೊರತು ಬೇರೇನೂ ಅಲ್ಲ.
+					</p>
+					<button type="button" class="btn btn-info btn-md"><a href="#"></a></button>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div class="service-box wow flipInY" data-wow-duration="1.5s" data-wow-delay="0.1s">
+					<span class="glyphicon glyphicon-heart"></span>
+					<h3></h3>
+					<p>
+						ದಯೆಯ ಕಾರ್ಯಗಳು ಅಭಿವೃದ್ಧಿ ಹೊಂದುತ್ತಿರುವ ಸಮುದಾಯದ ಅಡಿಪಾಯವಾಗಿದೆ. ಇತರರಿಗೆ ಸಹಾಯ ಮಾಡುವ ಮೂಲಕ, ನಾವು ನಮ್ಮ ಸ್ಥಳೀಯ ನೆಟ್‌ವರ್ಕ್‌ಗಳನ್ನು ಬಲಪಡಿಸುತ್ತೇವೆ, ಸಾಮಾಜಿಕ ಬೆಳವಣಿಗೆಯನ್ನು ಬೆಂಬಲಿಸುತ್ತೇವೆ ಮತ್ತು ನಮ್ಮ ರಾಷ್ಟ್ರದ ಒಟ್ಟಾರೆ ಯೋಗಕ್ಷೇಮಕ್ಕೆ ಕೊಡುಗೆ ನೀಡುತ್ತೇವೆ.
+
+
+					</p>
+					<button type="button" class="btn btn-info btn-md"><a href="#"></a></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+<!-- Random
+	================================================== -->
+<section class="parallax section" style="background-image: url(http://themepush.com/demo/runcharity/assets/img/3.jpg);">
+	<div class="wrapsection">
+	<div class="parallax-overlay"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 sol-sm-12">
+				<div class="maintitle">
+					<h3 class="section-title justtitle"></h3>
+					<p class="lead bottom0 wow bounceInUp">
+						
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</section>
+<!-- Gallery
+	================================================== -->
+	<section id="gallery" class="parallax section" style="background-image: url(http://themepush.com/demo/runcharity/assets/img/2.jpg);">
+		<div class="wrapsection">
+		  <div class="parallax-overlay" style="background-color:#00c1c1;opacity:0.9;"></div>
+		  <div class="container">
+			<div class="row">
+			  <div class="col-md-12 sol-sm-12">
+				<div class="maintitle">
+				  <!-- Added Image Here -->
+				  <h3 class="section-title" style="padding: auto;">ಸಹಾಯ ಚಟುವಟಿಕೆಗಳು</h3>
+				  <p class="lead wow flipInX">
+					<ul>
+					  <li style="text-align: start; padding: 10px;">ಬೆಳದಿಂಗಲು ಅವರು ಬಡ ಕುಟುಂಬ ಮತ್ತು ಮಕ್ಕಳಿಗೆ ಮಾತ್ರ ಸಹಾಯ ಮಾಡುತ್ತಾರೆ ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಲು ಕೆಲವು ಕಾರ್ಯವಿಧಾನಗಳನ್ನು ಹೊಂದಿರುತ್ತದೆ. ಶಿಕ್ಷಣಕ್ಕಾಗಿ, ನಮ್ಮ ತಂಡವು ವೈಯಕ್ತಿಕವಾಗಿ ಶಾಲೆಗಳನ್ನು ಸಂಪರ್ಕಿಸುತ್ತದೆ ಮತ್ತು ವಾಸ್ತವವನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳುತ್ತದೆ ಮತ್ತು ಅದಕ್ಕೆ ಅನುಗುಣವಾಗಿ ಸಹಾಯ ಕಾರ್ಯಸೂಚಿಯನ್ನು ಯೋಜಿಸುತ್ತದೆ. ಅಗತ್ಯವಿರುವ ಜನರಿಂದ ಸ್ವೀಕರಿಸಿದ ಅರ್ಜಿಯ ಆಧಾರದ ಮೇಲೆ ಕುಟುಂಬಗಳಿಗೆ ಬೆಳದಿಂಗಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ, ಆದಾಗ್ಯೂ ನಾವು ಯಾವುದೇ ಸಹಾಯವನ್ನು ಸ್ವೀಕರಿಸುವ ಮತ್ತು ಒಪ್ಪಿಕೊಳ್ಳುವ ಮೊದಲು ನಮ್ಮ ತಂಡವು ವಾಸ್ತವತೆಯನ್ನು ಮೌಲ್ಯಮಾಪನ ಮಾಡುತ್ತದೆ.</li>
+					  <li style="text-align: start; padding: 10px;">ಬೆಳದಿಂಗಲು ದಾನಿಗಳನ್ನು ತಮ್ಮ ಪ್ರಮುಖ ಚಟುವಟಿಕೆಗಳಿಗೆ ಮುಖ್ಯ ಅತಿಥಿಯಾಗಿ ಆಹ್ವಾನಿಸುತ್ತಾರೆ.</li>
+					  <li style="text-align: start; padding: 10px;">ಬೆಳದಿಂಗಲು ಸ್ವಯಂಪ್ರೇರಿತವಾಗಿ ಸಹಾಯ ಮಾಡಲು ಸಿದ್ಧರಿರುವ ಉತ್ತಮವಾಗಿ ನೆಲೆಸಿರುವ ಮತ್ತು ವಿದ್ಯಾವಂತರಿಂದ ನಿಧಿಯನ್ನು ಸಂಗ್ರಹಿಸುತ್ತದೆ. ನಮ್ಮ ನಂಬಿಕೆಯ ಉದ್ದೇಶ ಮತ್ತು ಗುರಿಯನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳುವ ಮೂಲಕ.</li>
+					  <li style="text-align: start; padding: 10px;">ಬೆಳದಿಂಗಳು ಶಿಕ್ಷಣ, ಆರೋಗ್ಯ, ಉದ್ಯೋಗ, ಸಮಾಜ ಕಲ್ಯಾಣ ಜಾಗೃತಿ ಕುರಿತು ಉಚಿತ ತರಬೇತಿ ನೀಡುತ್ತಿದೆ.</li>
+					  <li style="text-align: start; padding: 10px;">ಬೆಳದಿಂಗಲು ಪ್ರತಿ ವಾರ್ಷಿಕ ಚಟುವಟಿಕೆಗಳನ್ನು ನಿರಂತರವಾಗಿ ಮುಂಚಿತವಾಗಿ ಯೋಜಿಸುತ್ತದೆ.</li>
+					  <li style="text-align: start; padding: 10px;">ನಿಜವಾದ ಕಾರಣಗಳಿಗಾಗಿ ಬಡ ಕುಟುಂಬಕ್ಕೆ ಕಡಿಮೆ ಬಡ್ಡಿದರದಲ್ಲಿ ಸಾಲವನ್ನು ಪಡೆಯಲು ಬೆಳದಿಂಗಲು ಸಂಘಟಿಸುತ್ತದೆ ಮತ್ತು ಸಂಘಟಿಸುತ್ತದೆ.</li>
+					  <li style="text-align: start; padding: 10px;">ಬೆಳದಿಂಗಲು 100% ಲಾಭರಹಿತ ಸಂಸ್ಥೆಯಾಗಿದೆ. ಇದು ದಾನಿಗಳಿಗೆ ಆದಾಯ ತೆರಿಗೆ ರಿಯಾಯಿತಿ ಪ್ರಮಾಣಪತ್ರವನ್ನು ಪಡೆಯುವ ದಿಕ್ಕಿನಲ್ಲಿದೆ.</li>
+					</ul>
+				  </p>
+			
+				  <h3 class="section-title">ಟ್ರಸ್ಟ್‌ನ ಗುರಿಗಳು ಮತ್ತು ಉದ್ದೇಶಗಳು</h3>
+				  <ul>
+					<li style="text-align: start; padding: 10px;">ರಾಷ್ಟ್ರೀಯ ಕಾರ್ಯಕ್ರಮಗಳಿಗೆ ಅನುಗುಣವಾಗಿ ಶಿಕ್ಷಣ ಮತ್ತು ವೃತ್ತಿಪರ ತರಬೇತಿಯನ್ನು ಒದಗಿಸಲು ಮತ್ತು ತರಬೇತಿ ಪಡೆದ ವ್ಯಕ್ತಿಗಳ ಪರಿಣಾಮಕಾರಿ ಬಳಕೆ.</li>
+					<li style="text-align: start; padding: 10px;">ಗ್ರಾಮೀಣ ಹಿನ್ನೆಲೆಯಿಂದ ಬರುವ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ವಿದ್ಯಾಭ್ಯಾಸಕ್ಕೆ ಅನುಕೂಲವಾಗುವಂತೆ ಮತ್ತು ವೃತ್ತಿಪರ ತರಬೇತಿಯನ್ನು ನೀಡಲು ಮತ್ತು ಪದವಿ, ಡಿಪ್ಲೋಮಾ ಮತ್ತು ತಾಂತ್ರಿಕ ತರಬೇತಿಯಲ್ಲಿ ಪ್ರಮಾಣಪತ್ರಕ್ಕಾಗಿ ಕೋರ್ಸ್‌ಗಳನ್ನು ವ್ಯವಸ್ಥೆಗೊಳಿಸುವುದು ಮತ್ತು ಸಂಸ್ಥೆಗಳಲ್ಲಿ ಆಂತರಿಕ ತರಬೇತಿ ಅಥವಾ ಆಂತರಿಕ ತರಬೇತಿಯನ್ನು ಒದಗಿಸುವುದು.</li>
+					<li style="text-align: start; padding: 10px;">ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಹೆಚ್ಚು ಅಗತ್ಯವಿರುವ ವಸತಿ ಮತ್ತು ಬೆಂಬಲವನ್ನು ಒದಗಿಸಲು ಶಿಬಿರಗಳು, ತರಬೇತಿ ಕಾರ್ಯಕ್ರಮ ಮತ್ತು ಕೇಂದ್ರಗಳನ್ನು ಸ್ಥಾಪಿಸುವ ಮೂಲಕ ಅನುದಾನ, ಸಹಾಯಧನ ಅಥವಾ ಇತರ ಸಹಾಯವನ್ನು ನೀಡುವುದು.</li>
+					<li style="text-align: start; padding: 10px;">ಕುಶಲಕರ್ಮಿಗಳಿಗೆ ಮಾಹಿತಿ ಮತ್ತು ಜ್ಞಾನದ ಪ್ರಯೋಜನವನ್ನು ಹರಡಲು ನಿರ್ದಿಷ್ಟ ಮತ್ತು ವಿಷಯ ಆಧಾರಿತ ಉಪನ್ಯಾಸಗಳು, ಸೆಮಿನಾರ್‌ಗಳು ಮತ್ತು ಪ್ರಕಟಣೆಗಳನ್ನು ಆಯೋಜಿಸುವುದು.</li>
+					<li style="text-align: start; padding: 10px;">ಧರ್ಮ, ಜಾತಿ, ಪಂಥ, ಪಂಗಡ, ವರ್ಗ ಅಥವಾ ಸಮುದಾಯವನ್ನು ಲೆಕ್ಕಿಸದೆ ಬಡವರು, ನಿರ್ಗತಿಕರು, ನಿರ್ಗತಿಕರು, ಮತ್ತು/ಅಥವಾ ದುಡಿಯುವ ಜನರ ಪರಿಹಾರಕ್ಕಾಗಿ ಸಾಮಾಜಿಕ ಕಲ್ಯಾಣ ಮತ್ತು ಸೇವಾ ಚಟುವಟಿಕೆಗಳನ್ನು ಕೈಗೊಳ್ಳಲು, ಕೈಗೊಳ್ಳಲು, ಪ್ರಾರಂಭಿಸಲು, ಬೆಂಬಲಿಸಲು ಮತ್ತು/ಅಥವಾ ಉತ್ತೇಜಿಸಲು ಮತ್ತು ಅವರ ವೈಯಕ್ತಿಕ, ಆರ್ಥಿಕ, ವೈದ್ಯಕೀಯ, ಸಾಮಾಜಿಕ ಮತ್ತು ಕೌಟುಂಬಿಕ ತೊಂದರೆಗಳನ್ನು ಪರಿಹರಿಸುವಲ್ಲಿ ಮತ್ತು ಪರಿಹರಿಸುವಲ್ಲಿ ಮತ್ತು ಪಠ್ಯ ಪುಸ್ತಕಗಳು, ನೋಟ್ ಪುಸ್ತಕಗಳು, ಬಟ್ಟೆಗಳು, ಸಮವಸ್ತ್ರಗಳು ಮತ್ತು/ಅಥವಾ ಊಟದ ವಿತರಣೆಯ ಮೂಲಕ ಅವರಿಗೆ ಸೌಲಭ್ಯಗಳು ಮತ್ತು ತರಬೇತಿಯನ್ನು ಒದಗಿಸುವುದು.</li>
+					<li style="text-align: start; padding: 10px;">ನಗರಗಳು, ಪಟ್ಟಣಗಳು, ಹಳ್ಳಿಗಳು ಮತ್ತು ಮೊಫುಸಿಲ್ ಪ್ರದೇಶಗಳಲ್ಲಿ ಶಿಕ್ಷಣವನ್ನು ಪ್ರಾರಂಭಿಸಲು, ಬೆಂಬಲಿಸಲು ಮತ್ತು/ಅಥವಾ ಉತ್ತೇಜಿಸಲು ಮತ್ತು ಶಿಶುವಿಹಾರವನ್ನು ತೆರೆಯಲು, ಹೊಂದಿಸಲು, ನಿರ್ವಹಿಸಲು, ಸಂಘಟಿಸಲು, ನಿರ್ವಹಿಸಿ, ಪ್ರೋತ್ಸಾಹಿಸಲು, ಬೆಂಬಲಿಸಲು, ಸಹಯೋಗಿಸಲು, ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡಲು, ಅನುದಾನ, ಹಣಕಾಸಿನ ನೆರವು, ನಡೆಸಲು ಮತ್ತು / ಅಥವಾ ನಿರ್ವಹಿಸಲು ಶಾಲೆಗಳು, ಪೂರ್ವ-ಪ್ರಾಥಮಿಕ, ಪ್ರಾಥಮಿಕ, ಮಧ್ಯಮ ಮತ್ತು ಉನ್ನತ ಶಿಕ್ಷಣ ಶಾಲೆಗಳು, ವೃತ್ತಿಪರ ಶಾಲೆಗಳು, ಕಾಲೇಜುಗಳು, ಸಂಸ್ಥೆಗಳು ಮತ್ತು / ಅಥವಾ ತಾಂತ್ರಿಕ ಕೇಂದ್ರಗಳು ಶಾಲಾ ಮತ್ತು ಕಾಲೇಜು ಶಿಕ್ಷಣವನ್ನು ಒದಗಿಸುವ ಮತ್ತು ನೀಡುವ ಉದ್ದೇಶದಿಂದ, ವೃತ್ತಿಪರ ಶಿಕ್ಷಣ, ವೃತ್ತಿಪರ ತರಬೇತಿ, ಅನೌಪಚಾರಿಕ ಶಿಕ್ಷಣ ಮತ್ತು / ಅಥವಾ ಉದ್ಯೋಗ ಆಧಾರಿತ ಶಿಕ್ಷಣ.</li>
+					<li style="text-align: start; padding: 10px;">ಬಡ ನಿರ್ಗತಿಕರ ಅನುಕೂಲಕ್ಕಾಗಿ ಸರ್ಕಾರ ಮತ್ತು/ಅಥವಾ ಸ್ವಯಂಸೇವಾ ಸಂಸ್ಥೆ(ಗಳು) ಮತ್ತು/ಅಥವಾ ವ್ಯಕ್ತಿ(ಗಳು) ನಡೆಸುವ ಕಾರ್ಯಕ್ರಮಗಳನ್ನು ಬೆಂಬಲಿಸುವುದು, ಸ್ಥಾಪಿಸುವುದು, ನಿರ್ವಹಿಸುವುದು, ಸಂಘಟಿಸುವುದು, ನಿರ್ವಹಿಸುವುದು, ಪ್ರೋತ್ಸಾಹಿಸುವುದು, ಸಂಯೋಜಿಸುವುದು, ಮೇಲ್ವಿಚಾರಣೆ ಮಾಡುವುದು, ಪ್ರಚಾರ ಮಾಡುವುದು ಮತ್ತು ನಿರ್ವಹಿಸುವುದು ಮತ್ತು ದೀನದಲಿತರು ತಮ್ಮ ಮೂಲಭೂತ ಅಗತ್ಯಗಳಾದ ಆಹಾರ, ಬಟ್ಟೆ, ವಸತಿ, ಆರೋಗ್ಯ, ಶಿಕ್ಷಣ, ವಸತಿ ಮತ್ತು ಉದ್ಯೋಗವನ್ನು ಒದಗಿಸಲು; ಆರ್ಥಿಕವಾಗಿ ಮತ್ತು ಸಾಮಾಜಿಕವಾಗಿ ವಿಕಲಚೇತನರು, ನಿರ್ಗತಿಕರು ಮತ್ತು ಸಮಾಜದ ದುರ್ಬಲ ವರ್ಗಗಳು ಅವರ ಶಿಕ್ಷಣ, ಆರೋಗ್ಯ, ಸಾಮಾಜಿಕ ಮತ್ತು ಆರ್ಥಿಕ ಕಲ್ಯಾಣ ಮತ್ತು ಅವರ ಎಲ್ಲಾ ಮಾನವ ಘನತೆಯ ಪ್ರಚಾರ ಅಥವಾ ಅವರ ಬೆಳವಣಿಗೆ ಮತ್ತು ಅಭಿವೃದ್ಧಿ ಮತ್ತು / ಅಥವಾ ಹಣಕಾಸಿನ ನೆರವು ನೀಡುವ ಮೂಲಕ;</li>
+					<li style="text-align: start; padding: 10px;">ವೃದ್ಧರ ಮತ್ತು ಹಿರಿಯ ನಾಗರಿಕರ ಅನುಕೂಲಕ್ಕಾಗಿ ವೃದ್ಧರ ಮನೆಗಳು, ಆಶ್ರಯಗಳು, ಚಿಕಿತ್ಸಾಲಯಗಳು, ಹಾಸ್ಟೆಲ್‌ಗಳು, ಸಲಹಾ ಕೇಂದ್ರಗಳು, ಪುನರ್ವಸತಿ ಕೇಂದ್ರಗಳು ಇತ್ಯಾದಿಗಳನ್ನು ಸ್ಥಾಪಿಸಲು, ನಿರ್ವಹಿಸಲು ಮತ್ತು / ಅಥವಾ ನಿರ್ವಹಿಸಲು, ಬೆಂಬಲಿಸಲು, ನಿರ್ವಹಿಸಲು, ಸಂಘಟಿಸಲು, ನಿರ್ವಹಿಸಲು, ಪ್ರೋತ್ಸಾಹಿಸಲು , ಸಹವರ್ತಿ, ಮೇಲ್ವಿಚಾರಣೆ, ಹಣಕಾಸಿನ ನೆರವು ನೀಡುವುದು ಮತ್ತು / ಅಥವಾ ವೃದ್ಧರು ಮತ್ತು ವಯಸ್ಸಾದವರ (ಅರವತ್ತು ವರ್ಷಕ್ಕಿಂತ ಮೇಲ್ಪಟ್ಟವರು ಮತ್ತು ಲಾಭದಾಯಕ ಸೇವೆ ಅಥವಾ ಉದ್ಯೋಗದಿಂದ ನಿವೃತ್ತರಾದವರು) ಮತ್ತು / ಅಥವಾ ಅವರನ್ನು ಪೂರೈಸಲು ಹಣಕಾಸಿನ ನೆರವು ನೀಡುವ ಮೂಲಕ ಕಾರ್ಯಕ್ರಮಗಳನ್ನು ಕೈಗೊಳ್ಳುವುದು ಮನೆ ಬಾಡಿಗೆ, ವೃದ್ಧಾಶ್ರಮಗಳಿಗೆ ಠೇವಣಿ, ದೈನಂದಿನ ಜೀವನ ವೆಚ್ಚ, ಶುಶ್ರೂಷೆ, ವೈದ್ಯಕೀಯ ಆರೈಕೆ ಮತ್ತು ಚಿಕಿತ್ಸೆ, ಆಸ್ಪತ್ರೆಯ ಶುಲ್ಕಗಳು, ವೀಲ್ ಚೇರ್‌ಗಳು, ವಾಕರ್‌ಗಳು ಮತ್ತು ವಾಕಿಂಗ್ ಸ್ಟಿಕ್‌ಗಳಂತಹ ಉಪಕರಣಗಳು, ಮತ್ತು ಅವರ ಒಟ್ಟಾರೆ ಮಾನವ ಬಾವಿಗೆ ಸಂಬಂಧಿಸಿದಂತಹವುಗಳು -ಇರುವುದು ಮತ್ತು / ಅಥವಾ ಅಂತಹ ಸೇವೆಗಳನ್ನು ಒದಗಿಸುವಲ್ಲಿ ತೊಡಗಿರುವವರಿಗೆ ಸಹಯೋಗ, ಸಹಕಾರ ಮತ್ತು ಹಣಕಾಸಿನ ನೆರವು ಒದಗಿಸುವ ಮೂಲಕ.</li>
+					<li style="text-align: start; padding: 10px;">ಯಾವುದೇ ಅರ್ಹ ವ್ಯಕ್ತಿಗೆ ಅಥವಾ ಯಾವುದೇ ವ್ಯಕ್ತಿಯ ವಾರ್ಡ್‌ಗೆ ಅವನ ಅಥವಾ ಅವಳ ವೆಚ್ಚಗಳನ್ನು ಪೂರೈಸಲು ಮೇಲಿನ ಯಾವುದೇ ಉದ್ದೇಶಗಳನ್ನು ಸಾಧಿಸಲು ಮೃದು-ಸಾಲಗಳನ್ನು (ಬಡ್ಡಿಯಿಲ್ಲದೆ), ಸೇತುವೆ-ಸಾಲಗಳು, ವಿದ್ಯಾರ್ಥಿವೇತನಗಳು, ಅನುದಾನಗಳು, ಸಬ್ಸಿಡಿಗಳು ಇತ್ಯಾದಿಗಳನ್ನು ಒದಗಿಸಲು ಶಿಕ್ಷಣ, ವೈದ್ಯಕೀಯ ಆರೈಕೆ ಉದ್ಯೋಗ (ಸ್ವಯಂ ಉದ್ಯೋಗ ಸೇರಿದಂತೆ), ಮದುವೆ, ಕೃಷಿ ಅಭಿವೃದ್ಧಿ, ಗ್ರಾಮೀಣ ಅಭಿವೃದ್ಧಿ ಅಥವಾ ಕಾಲಕಾಲಕ್ಕೆ ರೂಪಿಸಲಾದ ಯೋಜನೆಗಳ ಪ್ರಕಾರ ಮತ್ತು / ಅಥವಾ ಇತರ ಯಾವುದೇ ಉದ್ದೇಶಗಳಿಗಾಗಿ ಮೇಲಿನ ಯಾವುದೇ ಉದ್ದೇಶಗಳನ್ನು ಸಾಧಿಸಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ ಸಮಾಜ ಅಥವಾ ಟ್ರಸ್ಟ್ ಅಥವಾ ಸಂಸ್ಥೆಯು ಒಂದೇ ರೀತಿಯ ವಸ್ತುಗಳಲ್ಲಿ ತೊಡಗಿಸಿಕೊಂಡಿದೆ.</li>
+					<li style="text-align: start; padding: 10px;">ರಕ್ತನಿಧಿಗಳು, ನೇತ್ರ ಬ್ಯಾಂಕ್, ಸುಡುವ ಕೇಂದ್ರಗಳು, ಸಂಚಾರಿ ವೈದ್ಯಕೀಯ ಸೇವೆಗಳು, ಪ್ರಾಥಮಿಕ ಆರೋಗ್ಯ ಶಿಕ್ಷಣ ಮತ್ತು ವೈದ್ಯಕೀಯ, ದಂತ, ನೇತ್ರ ತಪಾಸಣೆ ಶಿಬಿರಗಳನ್ನು ನಡೆಸಲು ಜಾಗೃತಿ ಮೂಡಿಸಲು, ಸ್ಥಾಪಿಸಲು, ಉತ್ತೇಜಿಸಲು ಅಥವಾ ಸ್ವಾಧೀನಪಡಿಸಿಕೊಳ್ಳಲು.</li>
+					<li style="text-align: start; padding: 10px;">ಕೃಷಿ ಅಭಿವೃದ್ಧಿ, ಪರಿಸರ ಕಾರ್ಯಕ್ರಮಗಳು, ಸಾಮಾಜಿಕ, ಪ್ರಾಣಿ ಕಲ್ಯಾಣ ಕಾರ್ಯಕ್ರಮಗಳು ಮತ್ತು ವಿವಿಧ ಗ್ರಾಮೀಣ ಕಲ್ಯಾಣ ಕಾರ್ಯಕ್ರಮಗಳನ್ನು ಉತ್ತೇಜಿಸಲು ಮಹಿಳಾ ಮತ್ತು ಮಕ್ಕಳ ಅಭಿವೃದ್ಧಿ ಕಾರ್ಯಕ್ರಮಗಳ ಸುಧಾರಣೆಗಾಗಿ ವಿವಿಧ ಯೋಜನೆಗಳನ್ನು ನಡೆಸಲು, ಉತ್ತೇಜಿಸಲು, ಸಂಘಟಿಸಲು, ಯೋಜಿಸಲು ಮತ್ತು ಕಾರ್ಯಗತಗೊಳಿಸಲು.</li>
+				  </ul>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </section>
+<!-- Text Carousel
+	================================================== -->
+
+<section id="slider" class="parallax section" style="background-image: url(http://themepush.com/demo/runcharity/assets/img/4.jpg);">
+
+<div class="wrapsection">
+
+	<div class="container">
+		<div class="slider-header">
+			<h4 class="slider-heading" style="color: black;text-align: center;">ಶ್ರೀ ಮಹೇಶ್ ಮೂರ್ತಿ ಬಟ್ಟೆ ವಿತರಿಸಿದರು</h4>
+			
+		</div>
+		<div class="row">
+			
+			<div class="col-md-4">
+			
+				<a href="images/my-image.jpg" title="This is the description">
+					<img src="assets\img\mahesh1.jpg" alt="Description of the image" class="image-responsive">
+					<div class="description">
+					
+						
+						<div class="clearfix"></div>
+					</div>			
+				</a>
+			</div>
+			
+			<div class="col-md-4">
+				<a href="images/my-image.jpg" title="This is the description">
+					<img src="assets\img\mahesh2.jpg" alt="Description of the image" class="image-responsive">
+					<div class="description">
+						
+					
+						<div class="clearfix"></div>
+					</div>			
+				</a>
+			</div>
+			
+			<div class="col-md-4">
+				<a href="images/my-image.jpg" title="This is the description">
+					<img src="assets\img\mahesh3.jpg" alt="Description of the image" class="image-responsive">
+					<div class="description">
+					
+						
+						<div class="clearfix"></div>
+					</div>			
+				</a>
+			</div>
+			
+			<div class="col-md-4">
+				<a href="images/my-image.jpg" title="This is the description">
+					<img src="assets\img\mahesh4.jpg" alt="Description of the image" class="image-responsive">
+					<div class="description">
+						 
+						
+						<div class="clearfix"></div>
+					</div>			
+				</a>
+			</div>
+			
+			<div class="col-md-4">
+				<a href="images/my-image.jpg" title="This is the description">
+					<img src="assets\img\mahesh5.jpg" alt="Description of the image" class="image-responsive">
+					<div class="description">
+						
+						
+						<div class="clearfix"></div>
+					</div>			
+				</a>
+			</div>
+			
+			<div class="col-md-4">
+				<a href="images/my-image.jpg" title="This is the description">
+					<img src="assets\img\mahesh6.jpg" alt="Description of the image" class="image-responsive">
+					<div class="description">
+						 
+						
+						<div class="clearfix"></div>
+					</div>			
+				</a>
+			</div><br>
+			<div class="slider-header">
+				<h4 class="slider-heading"  style="color: black; text-align: center;">ಸಮರ್ಥನ್ ಟ್ರಸ್ಟ್‌ನಲ್ಲಿ ವಿಕಲಚೇತನ ಮಕ್ಕಳಿಗೆ ಬಟ್ಟೆ ವಿತರಿಸುತ್ತಿರುವ ಶ್ರೀ ಬಿ.ಶ್ರೀನಿವಾಸ್ ಮತ್ತು ಶ್ರೀಮತಿ ಶ್ರೀನಿವಾಸ್</h4>
+				
+			</div>
+			<div class="col-md-4">
+				<a href="images/my-image.jpg" title="This is the description">
+					<img src="assets\img\srinivas1.jpg" alt="Description of the image" class="image-responsive">
+					<div class="description">
+					
+						<div class="clearfix"></div>
+					</div>			
+				</a>
+			</div>
+			
+			
+			<div class="col-md-4">
+				<a href="images/my-image.jpg" title="This is the description">
+					<img src="assets\img\srinivas2.jpg" alt="Description of the image" class="image-responsive">
+					<div class="description">
+						
+						
+						<div class="clearfix"></div>
+					</div>			
+				</a>
+			</div>
+
+
+			<div class="col-md-4">
+				<a href="images/my-image.jpg" title="This is the description">
+					<img src="assets\img\srinivas3.jpg" alt="Description of the image" class="image-responsive">
+					<div class="description">
+						
+						<div class="clearfix"></div>
+					</div>			
+				</a>
+			</div>
+
+		</div>
+	</div>
+</div>
+</section>
+<!-- FAQ
+	================================================== -->
+<section id="faq" class="section" >
+<div class="wrapsection">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 sol-sm-12">
+				<div class="maintitle">
+					<h3 class="section-title">ರಾಯರವತ್<span class="wow bounceInRight"></span></h3>
+					<p class="lead">
+						ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ತಂಡದಲ್ಲಿ, ಅವರ ಕುಟುಂಬ ಮತ್ತು ಅವರ ಸ್ಥಿತಿಯ ಬಗ್ಗೆ ಅವರ ಸುದ್ದಿಗಳನ್ನು ಹಂಚಿಕೊಳ್ಳುವುದು ನಮ್ಮ ಗುರಿಯಾಗಿದೆ.
+                        ಬೆಳದಿಂಗಳು ಈ ಸುದ್ದಿಯನ್ನು ಎಲ್ಲರಿಗೂ ನೀಡಲು ವಿಶೇಷ ಆಸಕ್ತಿ ವಹಿಸಿದ್ದಾರೆ ಮತ್ತು ಈ ಜನರಿಗೆ ಪರಿಣಾಮಕಾರಿಯಾಗಿ ಸಹಾಯ ಮಾಡಲು ಮುಂದಾಗಿದ್ದಾರೆ.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4 col-sm-6">
+			<div class="service-box wow flipInY" data-wow-duration="1.5s" data-wow-delay="0.1s">
+				<span class="glyphicon glyphicon-star"></span>
+				<h3></h3>
+				<p>
+					ರಾಯರವತ್ ಎಂಬುದು ಒಂದು ಜಾತಿಯಾಗಿದ್ದು, ಅವರು ವಿಜಯನಗರ ಮತ್ತು ಮೈಸೂರು ರಾಜರಿಗೆ ಕುದುರೆ ಸವಾರಿ ಮಾಡುತ್ತಿದ್ದರು, ವಿಶೇಷವಾಗಿ ಅವರು ವಿಶೇಷ ಕುದುರೆ ಸವಾರರು.
+
+
+				</p>
+				<button type="button" class="btn btn-info btn-md"><a href="#"></a></button>
+			</div>
+		</div>
+		<div class="col-md-4 col-sm-6">
+			<div class="service-box wow flipInY" data-wow-duration="1.5s" data-wow-delay="0.1s">
+				<span class="glyphicon glyphicon-star"></span>
+				<h3></h3>
+				<p>
+					
+					ಆದಾಗ್ಯೂ, ನಮಗೆಲ್ಲರಿಗೂ ತಿಳಿದಿರುವಂತೆ ಭಾರತದಲ್ಲಿ ಬ್ರಿಟಿಷರ ಪ್ರವೇಶದಿಂದಾಗಿ ಸಾಮ್ರಾಜ್ಯದ ದಿನಗಳು ನಾಶವಾಗುತ್ತವೆ. ಆ ಸಮಯದಲ್ಲಿ ರಾಯರವತ್ ಜನರು ಪ್ರಪಂಚದಾದ್ಯಂತ ಚದುರಿಹೋದರು.
+
+				</p>
+				<button type="button" class="btn btn-info btn-md"><a href="#"></a></button>
+			</div>
+		</div>
+		<div class="col-md-4 col-sm-6">
+			<div class="service-box wow flipInY" data-wow-duration="1.5s" data-wow-delay="0.1s">
+				<span class="glyphicon glyphicon-star"></span>
+				<h3></h3>
+				<p>
+					ಕರ್ನಾಟಕದಲ್ಲಿ ಮತ್ತು ಸುತ್ತಮುತ್ತ ಕೆಲವೇ ಜನರಿದ್ದಾರೆ. ಈ ಪುಟವನ್ನು RAYRAVATH ಗಾಗಿ ಸಮರ್ಪಿಸಲಾಗಿದೆ.
+
+
+				</p>
+				<button type="button" class="btn btn-info btn-md"><a href="#"></a></button>
+			</div>
+		</div>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+<!-- Random
+	================================================== -->
+<section class="whitecolor parallax section" style="background-image: url(http://themepush.com/demo/runcharity/assets/img/5.jpg);">
+<div class="wrapsection">
+	<div class="container">
+	<div class="row">
+		<div class="col-md-12 sol-sm-12">
+			<div class="maintitle">
+				<h3 class="section-title justtitle">Charity <span class="wow flipInX">&amp; love</span> are the same</h3>
+				<p class="lead bottom0">
+					 		</p>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+</section>
+<!-- Contact
+	================================================== -->
+	<section id="contactarea">
+		<footer>
+			<div class="footer">
+				<img src="assets\img\nubelson-fernandes-5ibknxQ17tw-unsplash-1.jpg" alt="Footer Background Image" class="footer-img">
+				<div class="footer-logo">
+					<img src="assets\img\logo-removebg-preview.png" alt="Logo" style="width: 150px;"> <!-- Adjust the path and size -->
+				</div>
+				<div class="location-details footer-section">
+					<h2>
+						ಸ್ಥಳ</h2>
+					<div class="country">
+						<ul>
+							<li style="text-align: start;">ಬೆಂಗಳೂರು,</li>
+							<li style="text-align: start;">ಮೈಸೂರು.</li>
+						</ul>
+						<p style="text-align: start;">&nbsp;&nbsp;&nbsp;&nbsp;INFO®CIRBRID</p> <!-- Adjust your branding or logo text -->
+					</div>
+				</div>
+				<div class="contact-details footer-section">
+					<h2>ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ</h2>
+					<div class="person-info">
+						<ul>
+							<li><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ಸಂಪರ್ಕ ಸಂಖ್ಯೆ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</b> Mr.B.Sreenivas<a href="#"> (9449874134 )</a></li>
+							<li><b>ವಾಣಿಜ್ಯ ಬೆಂಬಲ&nbsp;&nbsp;&nbsp;&nbsp;:</b> <a href="#">bid@cirbrid.com</a></li>
+							<li><b>ಸೇವಾ ಬೆಂಬಲ&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;:</b> <a href="#">sat@cirbrid.com</a></li>
+							<li><b>&nbsp;&nbsp;&nbsp;&nbsp;ತಾಂತ್ರಿಕ ಬೆಂಬಲ&nbsp; &nbsp;&nbsp;:</b> <a href="#">tech@cirbrid.com</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="email-subscription footer-section">
+					<h2>ಇಮೇಲ್ ಚಂದಾದಾರಿಕೆ</h2>
+					<div class="email-subscription">
+						<form action="#" method="post">
+							<input type="email" name="email" placeholder="Enter your email" required style="width: 50%;">
+							<button type="submit">ಚಂದಾದಾರರಾಗಿ</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			
+		</footer>
+</section>
+<!-- Credits 
+=============================================== -->
+<section id="credits" class="text-center">
+	<span class="social wow zoomIn">
+	<a href="#"><i class="fa fa-facebook"></i></a>
+	<a href="#"><i class="fa fa-twitter"></i></a>
+	<a href="#"><i class="fa fa-skype"></i></a>
+	<a href="#"><i class="fa fa-linkedin"></i></a>
+	<a href="#"><i class="fa fa-pinterest"></i></a>
+	<a href="#"><i class="fa fa-google-plus"></i></a>
+	</span><br/>
+	Copyright &copy; <a href="#">CIRBRID GREENOLOGY</a> 
+	
+</section>
+<!-- Bootstrap core JavaScript
+	================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/waypoints.min.js"></script>
+<script src="assets/js/jquery.scrollTo.min.js"></script>
+<script src="assets/js/jquery.localScroll.min.js"></script>
+<script src="assets/js/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/validate.js"></script>
+<script src="assets/js/common.js"></script>
+</body>
+</html>
